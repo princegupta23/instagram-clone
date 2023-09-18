@@ -12,6 +12,7 @@
     object-fit: contain;
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
+    
 }
 
 
@@ -31,4 +32,31 @@
 
 .post__avatar{
     margin-right: 10px;
+}
+
+
+.post__commentBox{
+    display: flex;
+    margin-top: 10px;
+}
+
+.post_input{
+    flex : 1;
+    padding: 10px;
+    border: none;
+    border-top: 1px solid lightgray;
+
+}
+
+.post_button{
+    flex: 0;
+    border: none;
+    color: #6082a3;
+    background-color: transparent;
+    border-top: 1px solid lightgray;
+    
+}
+
+.post__comments{
+    padding: 10px;
 }

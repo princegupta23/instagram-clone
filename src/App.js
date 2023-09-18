@@ -104,7 +104,7 @@ function App() {
      <form className='app_signup'>
       <img
         className='app__headerImage'
-        src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+        src="https://assets.turbologo.com/blog/en/2019/09/19084953/instagram-logo-illustration.png"
         alt=""
         />
         <input
@@ -142,7 +142,7 @@ function App() {
      <form className='app_signup'>
       <img
         className='app__headerImage'
-        src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
+        src="https://assets.turbologo.com/blog/en/2019/09/19084953/instagram-logo-illustration.png"
         alt=""
         />
        
@@ -172,6 +172,8 @@ function App() {
         src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
         alt=""
         />
+                  
+
          {user? (
       <Button onClick={() => auth.signOut()}>Logout</Button>
       ): (
@@ -181,7 +183,10 @@ function App() {
         </div>
         
       )}
-      </div>
+     
+      
+      
+        </div>
      
       
       
@@ -189,12 +194,17 @@ function App() {
 <div className="app__posts">
 <div className='app_posts_left'>{
       posts.map(({id, post}) => (
-        <Post key={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl}></Post>
+        <Post key={id} postId={id} user={user} username={post.username} caption={post.caption} imageUrl={post.imageUrl}></Post>
       ))
      }
      </div>
      <div className='app_posts_right'>
-     <InstagramEmbed
+
+{/* below is linkedin embed post functionality */}
+     {/* <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7107292621340835840" height="1059" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+     <br/>
+     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7108008500101816320" height="757" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe> */}
+     {/* <InstagramEmbed
   url='https://instagr.am/p/Zw9o4/'
   clientAccessToken='123|456'
   maxWidth={320}
@@ -206,8 +216,9 @@ function App() {
   onSuccess={() => {}}
   onAfterRender={() => {}}
   onFailure={() => {}}
-  
-/>
+ 
+/> */}
+
      </div>
      
      </div>
@@ -215,9 +226,9 @@ function App() {
 
 
      {user?.displayName ? (
-          <ImageUpload username={user.displayName}  />
+          <ImageUpload  username={user.displayName}  />
         ): (
-          <h3>Sorry, need to login to upload</h3>
+          <div className='bottom__msg'>Please login to upload your fav pictures !! </div>
         )}
 
     </div>
