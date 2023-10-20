@@ -28,6 +28,7 @@ function Homepage() {
 
   // const classes=useStyle();
   // const [modalStyle] = useState(getModalStyle);
+ 
 
  
   const [posts, setPosts] = useState([]);
@@ -199,7 +200,8 @@ function Homepage() {
       
 
 <div className="app__posts">
-<div className='app_posts_left'>{
+<div className='app_posts_left'>
+{
       posts.map(({id, post}) => (
         <Post key={id} postId={id} user={user} username={post.username} caption={post.caption} imageUrl={post.imageUrl}></Post>
       ))
@@ -211,20 +213,7 @@ function Homepage() {
      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7107292621340835840" height="1059" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
      <br/>
      <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7108008500101816320" height="757" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-     {/* <InstagramEmbed
-  url='https://instagr.am/p/Zw9o4/'
-  clientAccessToken='123|456'
-  maxWidth={320}
-  hideCaption={false}
-  containerTagName='div'
-  protocol=''
-  injectScript
-  onLoading={() => {}}
-  onSuccess={() => {}}
-  onAfterRender={() => {}}
-  onFailure={() => {}}
- 
-/> */}
+     
 
      </div>
      

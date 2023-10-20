@@ -1,9 +1,19 @@
 import React, { useState } from 'react'
 import "./Login.css"
+import { db, auth } from '../firebase';
 
 function Login() {
   const [email,setEmail]= useState("");
   const [password,setPassword]= useState("");
+  const logIn = (event) =>{
+    event.preventDefault();
+
+    auth.signInWithEmailAndPassword(email, password)
+    .catch((error) => alert(error.message))
+
+    // setOpenSignIn(false);
+  }
+
   
   return (
     <div className='login'>
@@ -25,7 +35,7 @@ function Login() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         />
-        <button type='submit'>Login</button>
+        <button type='submit' onClick={logIn}>Login</button>
     </div>
   )
 }

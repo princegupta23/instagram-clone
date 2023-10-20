@@ -1,15 +1,20 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import "./Authentication.css"
 import Login from './Login'
 import Signup from './Signup'
 
+
+
 function Authentication() {
+
+
 const[active, setActive]=useState("login");
 const handleChange = () => {
      setActive(active === "login" ? "signup" : "login")
 }
 
   return (
+
     <div className='authentication'>
         <div className="authentication__left">
             <img
@@ -32,6 +37,8 @@ const handleChange = () => {
                     
                 </span>
             </div>
+
+           
         </div>
     </div>
   )
