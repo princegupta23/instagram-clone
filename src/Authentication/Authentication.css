@@ -1,0 +1,41 @@
+.authentication{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 50px 0px 50px;
+}
+
+.authentication__left{
+    flex:0.5;
+    text-align: center;
+}
+
+.authentication__right{
+    flex: 0.5;
+}
+
+.authentication__left > img {
+    width: 600px;
+    margin-top: 40px;
+}
+
+.auth__more{
+    border: 1px solid gray;
+    padding: 20px;
+    margin-right: 30px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.auth__more > span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.auth__more > span > button {
+        background: 0;
+        font-weight: bolder;
+        color: #0095f6;
+        border: 0;
+        cursor: pointer;
+}
